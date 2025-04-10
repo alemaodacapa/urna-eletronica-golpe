@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>Urna Eletrônica Simulada</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="urna-container">
+        <div class="urna-screen">
+            <div id="candidato-foto"></div>
+            <div id="numero-display"></div>
+            <div id="mensagem"></div>
+        </div>
+        <div class="teclado">
+            <div class="numeros">
+                <button onclick="digitarNumero(1)">1</button>
+                <button onclick="digitarNumero(2)">2</button>
+                <button onclick="digitarNumero(3)">3</button>
+                <button onclick="digitarNumero(4)">4</button>
+                <button onclick="digitarNumero(5)">5</button>
+                <button onclick="digitarNumero(6)">6</button>
+                <button onclick="digitarNumero(7)">7</button>
+                <button onclick="digitarNumero(8)">8</button>
+                <button onclick="digitarNumero(9)">9</button>
+                <button onclick="digitarNumero(0)">0</button>
+            </div>
+            <div class="controles">
+                <button id="branco" onclick="votoBranco()">BRANCO</button>
+                <button id="corrige" onclick="corrige()">CORRIGE</button>
+                <button id="confirma" onclick="confirma()">CONFIRMA</button>
+            </div>
+        </div>
+        <div class="relatorio">
+            <h3>Relatório de Votos</h3>
+            <div id="registro-votos"></div>
+        </div>
+    </div>
+    <audio id="bip-som" src="bip.mp3"></audio>
+    <audio id="confirma-som" src="https://www.myinstants.com/media/sounds/confirma-urna.mp3"></audio>
+    <script src="script.js"></script>
+</body>
+</html>
